@@ -1,0 +1,37 @@
+logo|Electric car company founded by Elon Musk|Tesla,Apple,Google,Samsung|1|logos/logo/tesla.jpg
+logo|Company famous for iPhone and Mac computers|Microsoft,Apple,Intel,Sony|2|logos/logo/apple.png
+logo|Tech giant known for search engine and Android|Google,Amazon,Microsoft,Facebook|1|logos/logo/google.png
+logo|Company that started as an online bookstore|Amazon,Walmart,Target,eBay|1|logos/logo/amazon.png
+logo|Social media platform founded by Mark Zuckerberg|Facebook,Twitter,Instagram,LinkedIn|1|logos/logo/facebook.png
+logo|Streaming service known for shows and movies|Netflix,Hulu,Disney+,Amazon Prime|1|logos/logo/netflix.png
+logo|Company famous for Xbox gaming console|Microsoft,Sony,Nintendo,Sega|1|logos/logo/microsoft.png
+logo|Smartphone manufacturer from South Korea|Samsung,LG,Xiaomi,OnePlus|1|logos/logo/samsung.png
+logo|Operating system by Linus Torvalds|Linux,Windows,macOS,Android|1|logos/logo/linux.png
+logo|Programming language created by Guido van Rossum|Python,Java,C++,JavaScript|1|logos/logo/python.png
+logo|Video sharing platform founded by Steve Chen|YouTube,Vimeo,Dailymotion,Twitch|1|logos/logo/youtube.png
+logo|Company known for cloud computing and AWS|Amazon,Google Cloud,Microsoft Azure,IBM|1|logos/logo/aws.png
+logo|Mobile payment system by Apple|Apple Pay,Google Pay,Samsung Pay,Venmo|1|logos/logo/applepay.png
+logo|Cryptocurrency created by Satoshi Nakamoto|Bitcoin,Ethereum,Ripple,Litecoin|1|logos/logo/bitcoin.png
+logo|Social media platform for professional networking|LinkedIn,Facebook,Twitter,Instagram|1|logos/logo/linkedin.png
+logo|Company famous for Photoshop and Creative Suite|Adobe,Autodesk,Corel,GIMP|1|logos/logo/adobe.png
+logo|Video game console by Nintendo|Nintendo Switch,PlayStation,Xbox,Steam|1|logos/logo/nintendo.png
+logo|Ride-sharing app founded by Travis Kalanick|Uber,Lyft,Grab,Ola|1|logos/logo/uber.png
+logo|Cloud storage service by Dropbox|Dropbox,Google Drive,OneDrive,iCloud|1|logos/logo/dropbox.png
+logo|Company that makes electric vehicles and batteries|Tesla,Panasonic,LG Chem,Samsung SDI|1|logos/logo/tesla.jpg
+sdg|SDG Goal for eliminating poverty worldwide|No Poverty,Zero Hunger,Good Health,Quality Education|1|logos/sdg/poverty.png
+sdg|SDG Goal focused on ending hunger and malnutrition|Zero Hunger,No Poverty,Good Health,Clean Water|1|logos/sdg/hunger.png
+sdg|SDG Goal aimed at ensuring healthy lives|Good Health,No Poverty,Quality Education,Clean Water|1|logos/sdg/health.png
+sdg|SDG Goal for inclusive and equitable education|Quality Education,Decent Work,Reduced Inequalities,Peace|1|logos/sdg/education.png
+sdg|SDG Goal promoting gender equality|Gender Equality,No Poverty,Education,Reduced Inequalities|1|logos/sdg/gender.png
+sdg|SDG Goal ensuring access to clean water|Clean Water,Good Health,Life Below Water,Climate Action|1|logos/sdg/water.png
+sdg|SDG Goal for sustainable and affordable energy|Affordable Energy,Climate Action,Innovation,Industry|1|logos/sdg/energy.png
+sdg|SDG Goal promoting economic growth and employment|Decent Work,Economic Growth,Industry Innovation,Inequality|1|logos/sdg/work.png
+sdg|SDG Goal building resilient infrastructure|Industry Innovation,Infrastructure,Sustainable Cities,Work|1|logos/sdg/infrastructure.png
+sdg|SDG Goal reducing inequality within and among countries|Reduced Inequalities,No Poverty,Peace,Partnership|1|logos/sdg/inequality.png
+sdg|SDG Goal making cities inclusive and sustainable|Sustainable Cities,Climate Action,Life on Land,Partnership|1|logos/sdg/cities.png
+sdg|SDG Goal for responsible consumption and production|Responsible Consumption,Climate Action,Life Below Water,Land|1|logos/sdg/consumption.png
+sdg|SDG Goal addressing climate change|Climate Action,Clean Energy,Life Below Water,Life on Land|1|logos/sdg/climate.png
+sdg|SDG Goal protecting marine life and oceans|Life Below Water,Clean Water,Climate Action,Responsible Consumption|1|logos/sdg/ocean.png
+sdg|SDG Goal protecting terrestrial ecosystems|Life on Land,Climate Action,Sustainable Cities,Responsible Consumption|1|logos/sdg/land.png
+sdg|SDG Goal promoting peace and justice|Peace Justice,Reduced Inequalities,Partnership,Good Governance|1|logos/sdg/peace.png
+sdg|SDG Goal for strengthening partnerships globally|Partnership,Peace,All Goals,Sustainable Development|1|logos/sdg/partnership.png

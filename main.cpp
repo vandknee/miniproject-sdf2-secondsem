@@ -169,32 +169,92 @@ class Game {
 
     vector<Question> questions;
     Difficulty diff;
+    string gameMode;
 
 public:
-    Game() {
+    Game() {}
+
+    void selectGameMode() {
+        int mode;
+        cout << "\n========== GAME MODE SELECTION ==========\n";
+        cout << "1. Logo Guessing\n";
+        cout << "2. SDG (Sustainable Development Goals) Guessing\n";
+        cout << "Enter your choice (1-2): ";
+        
+        while (true) {
+            if (!(cin >> mode)) {
+                cout << "Invalid input! Enter 1 or 2: ";
+                cin.clear();
+                cin.ignore(10000, '\n');
+                continue;
+            }
+            
+            if (mode == 1) {
+                gameMode = "logo";
+                break;
+            } else if (mode == 2) {
+                gameMode = "sdg";
+                break;
+            } else {
+                cout << "Choose 1 or 2: ";
+            }
+        }
+        
         load();
     }
 
     void load() {
+        ifstream file("questions.txt");
+        string line;
+        vector<Question> allQuestions;
 
-        Question q1;
-        q1.clue = "Electric car company founded by Elon Musk";
-        q1.options = {"Tesla","Apple","Google","Samsung"};
-        q1.answer = 1;
-        q1.logo = "logos/tesla.jpg";
-        q1.hints.push_back(new FirstLetterHint());
+        while (getline(file, line)) {
+            if (line.empty()) continue;
 
-        Question q2;
-        q2.clue = "Company famous for iPhone and Mac computers";
-        q2.options = {"Microsoft","Apple","Intel","Sony"};
-        q2.answer = 2;
-        q2.logo = "logos/apple.png";
-        q2.hints.push_back(new FirstLetterHint());
+            // Parse the line: mode|clue|option1,option2,option3,option4|answer|logo
+            Question q;
+            
+            size_t pos0 = line.find('|');
+            size_t pos1 = line.find('|', pos0 + 1);
+            size_t pos2 = line.find('|', pos1 + 1);
+            size_t pos3 = line.find('|', pos2 + 1);
 
-        questions.push_back(q1);
-        questions.push_back(q2);
+            string mode = line.substr(0, pos0);
+            
+            // Skip if this question is not for the selected mode
+            if (mode != gameMode) continue;
+            
+            q.clue = line.substr(pos0 + 1, pos1 - pos0 - 1);
+            
+            string optionsStr = line.substr(pos1 + 1, pos2 - pos1 - 1);
+            q.answer = stoi(line.substr(pos2 + 1, pos3 - pos2 - 1));
+            q.logo = line.substr(pos3 + 1);
 
-        random_shuffle(questions.begin(), questions.end());
+            // Parse options
+            size_t optPos = 0;
+            while (optPos < optionsStr.length()) {
+                size_t commaPos = optionsStr.find(',', optPos);
+                if (commaPos == string::npos) {
+                    q.options.push_back(optionsStr.substr(optPos));
+                    break;
+                }
+                q.options.push_back(optionsStr.substr(optPos, commaPos - optPos));
+                optPos = commaPos + 1;
+            }
+
+            q.hints.push_back(new FirstLetterHint());
+            allQuestions.push_back(q);
+        }
+
+        file.close();
+
+        // Select 5 random questions
+        if (allQuestions.size() > 5) {
+            random_shuffle(allQuestions.begin(), allQuestions.end());
+            questions.assign(allQuestions.begin(), allQuestions.begin() + 5);
+        } else {
+            questions = allQuestions;
+        }
     }
 
     void selectDifficulty() {
@@ -282,9 +342,13 @@ public:
         cout << "Enter name: ";
         cin >> name;
 
-        selectDifficulty();
+        selectGameMode();
+        selectDifficulty(); 
 
         Player p(name);
+        
+        string modeDisplay = (gameMode == "logo") ? "Logo Guessing" : "SDG (Sustainable Development Goals)";
+        cout << "\n========== " << modeDisplay << " ==========\n";
 
         for (auto &q : questions) {
 

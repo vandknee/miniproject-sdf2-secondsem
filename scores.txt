@@ -1,1 +1,4 @@
 jsdh 5
+hello 50
+TestPlayer 50
+SDGPlayer 25
